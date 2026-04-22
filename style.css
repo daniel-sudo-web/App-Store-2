@@ -1,0 +1,172 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #cbd5f5;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1e293b, #020617);
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.hero p {
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 50px;
+}
+
+/* CARD */
+.card {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* IMAGE — ОБНОВЛЕННЫЙ БЛОК */
+.card img {
+    width: 100%;
+    height: 220px;       /* Фиксированная высота для всех фото */
+    object-fit: cover;   /* Сохраняет пропорции, заполняя область */
+    border-radius: 15px; /* Скругление углов самой фотографии */
+    margin-bottom: 15px; /* Отступ снизу до текста */
+    background: #020617; /* Темная подложка, если фото на прозрачном фоне */
+}
+
+/* TITLE */
+.card h3 {
+    margin-bottom: 5px;
+}
+
+/* SHORT DESC */
+.card p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* SPECS (характеристики 🔥) */
+.specs {
+    list-style: none;
+    text-align: left;
+    margin: 15px 0;
+    padding: 10px;
+    background: #020617;
+    border-radius: 10px;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+/* скролл красивый */
+.specs::-webkit-scrollbar {
+    width: 5px;
+}
+
+.specs::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 10px;
+}
+
+.specs li {
+    font-size: 13px;
+    color: #cbd5f5;
+    padding: 5px 0;
+    border-bottom: 1px solid #1e293b;
+}
+
+.specs li:last-child {
+    border-bottom: none;
+}
+
+/* PRICE */
+.card span {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #38bdf8;
+    margin: auto 0 15px; /* Выталкивает цену вниз, если текст разный */
+}
+
+/* BUTTON */
+.card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0ea5e9, #4f46e5);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+    color: #64748b;
+}
